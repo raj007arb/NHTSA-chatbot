@@ -82,7 +82,7 @@ def get_vehicle_data():
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template(r'index.html')
 
 @app.route('/get_chart', methods=['POST'])
 def get_chart():
