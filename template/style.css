@@ -1,0 +1,265 @@
+/* General Page Styling */
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #f5f7fa;
+    margin: 20px;
+    text-align: center;
+    color: #2c3e50;
+}
+
+/* 🚗 Vehicle Recall Form */
+#recallForm {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 24px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#recallForm label {
+    font-weight: 600;
+    color: inherit;
+}
+
+#recallForm input {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #d6e4f0;
+    border-radius: 8px;
+    width: 150px;
+    transition: all 0.2s ease;
+    background: white;
+    color: #2c3e50;
+}
+
+#recallForm input:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+    outline: none;
+}
+
+#recallForm button {
+    background: #3498db;
+    color: white;
+    padding: 12px 18px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+
+#recallForm button:hover {
+    background: #217dbb;
+    transform: translateY(-1px);
+}
+
+/* 🔄 Page Layout */
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 90%;
+    margin: auto;
+    gap: 24px;
+}
+
+/* 📊 Chart Section */
+.chart-section {
+    width: 60%;
+    background: white;
+    padding: 24px;
+    box-shadow: 0px 4px 6px -1px rgba(30, 28, 25, 0.1),
+                0px 2px 4px -1px rgba(30, 28, 25, 0.06);
+    border-radius: 16px;
+}
+
+.chart-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.chart-buttons button {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    font-size: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+
+.chart-buttons button:hover {
+    background: #217dbb;
+    transform: translateY(-1px);
+}
+
+/* 📊 Chart Display */
+#chartDisplay {
+    max-width: 100%;
+    display: block;
+    margin: 24px auto;
+    border-radius: 12px;
+    border: 1px solid #d6e4f0;
+    box-shadow: 0px 4px 6px -1px rgba(30, 28, 25, 0.1);
+}
+
+/* 💬 Chatbot Section */
+.chat-container {
+    width: 40%;
+    background: white;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    max-height: 500px;
+    overflow: hidden;
+}
+
+/* 💬 Chatbox */
+#chatBox {
+    background: #f5f7fa;
+    padding: 16px;
+    height: 400px;
+    overflow-y: auto;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Individual Messages */
+.message-container {
+    display: flex;
+    width: 100%;
+    margin-bottom: 6px;
+}
+
+.message {
+    max-width: 75%;
+    padding: 10px 14px;
+    border-radius: 16px;
+    font-size: 14px;
+    word-wrap: break-word;
+    display: inline-block;
+    line-height: 1.4;
+    position: relative;
+}
+
+/* User Messages (Right Aligned) */
+.user-message-container {
+    justify-content: flex-end; /* Pushes user messages to the right */
+}
+
+.user-message {
+    background: #3498db;
+    color: white;
+    border-bottom-right-radius: 4px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    text-align: right;
+}
+
+/* Bot Messages (Left Aligned) */
+.bot-message-container {
+    justify-content: flex-start; /* Pushes bot messages to the left */
+}
+
+.bot-message {
+    background: #e5e5ea;
+    color: #2c3e50;
+    border-bottom-left-radius: 4px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 14px;
+    border-radius: 16px;
+    max-width: 75%;
+    text-align: left; /* Ensures text inside is left-aligned */
+}
+
+/* Chat Input Section */
+.chat-input {
+    display: flex;
+    border-top: 1px solid #d6e4f0;
+    padding: 12px;
+    background: white;
+}
+
+/* Input Field */
+.chat-input input {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #d6e4f0;
+    border-radius: 20px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+/* Send Button */
+.chat-input button {
+    padding: 10px 16px;
+    font-size: 14px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-left: 8px;
+    transition: all 0.2s ease;
+}
+
+.chat-input button:hover {
+    background: #217dbb;
+}
+
+/* 📱 Responsive Design */
+@media screen and (max-width: 900px) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    .chart-section, .chat-container {
+        width: 100%;
+    }
+}
+
+/* Toast Notification */
+#toast {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    font-size: 16px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Show Toast */
+#toast.show {
+    visibility: visible;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeout {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
